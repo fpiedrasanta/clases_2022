@@ -1,0 +1,74 @@
+﻿@{
+    /********************************************************************************************
+    * Copyright (C) 2022 Ing. de Software, 3er año, ITSC
+    *
+    * This program is free software: you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation, either version 3 of the License, or
+    * (at your option) any later version.
+    *
+    * This program is distributed in the hope that it will be useful,
+    * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    * GNU General Public License for more details.
+    *
+    * You should have received a copy of the GNU General Public License
+    * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    *******************************************************************************************/
+}
+
+@model webapp.Models.ViewModel.ProgrammingParadigm.InheritanceExampleViewModel
+
+@{
+    ViewData["Title"] = "Ejemplo 1: Abstracción";
+}
+
+<hr>
+<p>
+    <p><strong>Animal: </strong> @Model.Animal.Name</p>
+    <p><strong>Nivel de defensa: </strong> @Model.Animal.LevelDefense</p>
+    <p><strong>Nivel de ataque: </strong> @Model.Animal.LevelAttack</p>
+
+</p>
+<hr>
+<p>
+    <p><strong>Animal: </strong> @Model.Monkey.Name</p>
+    <p><strong>Nivel de defensa: </strong> @Model.Monkey.LevelDefense</p>
+    <p><strong>Nivel de ataque: </strong> @Model.Monkey.LevelAttack</p>
+</p>
+<hr>
+<p>
+    <p><strong>Animal: </strong> @Model.Human.Name</p>
+    <p><strong>Nivel de defensa: </strong> @Model.Human.LevelDefense</p>
+    <p><strong>Nivel de ataque: </strong> @Model.Human.LevelAttack</p>
+</p>
+<hr>
+
+<p>
+    Accedo al campo Monkey.LevelDefense o Monkey.LevelAttack, pero no lo tiene
+    definido, ¿cómo puede ser?, porque lo hereda del tipo base (Animal).
+</p>
+<p>
+    Idem ocurre con Human, que hereda de Monkey.
+</p>
+<p>
+    Pero otra cosa interesante, vean los constructores cómo funcionaron.
+</p>
+<p>
+    <p>
+        <strong>Animal</strong> tiene 0 y 0 de niveles cuando lo construyo y 
+        le asigna el nombre.
+    </p>
+    <p>
+        <strong>Monkey</strong> tiene 4 y 6 de niveles cuando lo construyo y 
+        se le asigna el nombre a través del constructor de la clase base.
+    </p>
+    <p>
+        <strong>Human</strong> tiene 4 y 9 de niveles cuando lo construyo. 
+        El 9 lo asigna el constructor del humano, el 4 lo asigna el constructor 
+        del mono y el nombre lo asigna el constructor del animal.
+    </p>
+</p>
+<div class="row" >
+    <img src="~/img/mind-blown-mind.gif" class="rounded mx-auto d-block" alt="Mind blown!">
+</div>

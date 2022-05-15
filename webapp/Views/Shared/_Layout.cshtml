@@ -1,0 +1,58 @@
+﻿@{
+    /********************************************************************************************
+    * Copyright (C) 2022 Ing. de Software, 3er año, ITSC
+    *
+    * This program is free software: you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation, either version 3 of the License, or
+    * (at your option) any later version.
+    *
+    * This program is distributed in the hope that it will be useful,
+    * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    * GNU General Public License for more details.
+    *
+    * You should have received a copy of the GNU General Public License
+    * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    *******************************************************************************************/
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - webapp</title>
+        
+        <link rel='stylesheet' href='@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css")' />
+        <link rel='stylesheet' href='@Url.Content("~/css/site.css")' />
+        
+        <script src='@Url.Content("~/lib/jquery/dist/jquery.min.js")'></script>
+        <script src='@Url.Content("~/lib/bootstrap/dist/js/bootstrap.bundle.min.js")'></script>
+        <script src='@Url.Content("~/js/site.js")'></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Ingeniería de software 2022</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; Ingeniería de software 2022 - Distribuido bajo licencia GPLv3
+            </div>
+        </footer>
+    </body>
+</html>

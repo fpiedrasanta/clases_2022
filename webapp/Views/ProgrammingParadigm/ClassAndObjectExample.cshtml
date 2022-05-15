@@ -1,0 +1,44 @@
+﻿@{
+    /********************************************************************************************
+    * Copyright (C) 2022 Ing. de Software, 3er año, ITSC
+    *
+    * This program is free software: you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation, either version 3 of the License, or
+    * (at your option) any later version.
+    *
+    * This program is distributed in the hope that it will be useful,
+    * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    * GNU General Public License for more details.
+    *
+    * You should have received a copy of the GNU General Public License
+    * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    *******************************************************************************************/
+}
+
+@model webapp.Models.ViewModel.ProgrammingParadigm.ClassAndObjectExampleViewModel
+
+@{
+    ViewData["Title"] = "Ejemplo 1: Abstracción";
+}
+
+<hr>
+    <strong>Resultado de la carrera: </strong>@Model.Result
+<hr>    
+
+<p>
+    Tenemos una clase del tipo Car, con los atributos de velocidad y aceleración y la capacidad de acelerar
+    durante un cierto tiempo en segundos.
+</p>    
+<p>
+    Todos aquellos objetos que tengan una velocidad y aceleración y que pueden ser acelerados
+    conforman la "Clase" Car. Car es el conjunto de todos los posibles objetos.
+</p>
+<p>
+    Yo armo 2 objetos que los guardo en 2 variables diferentes (falcón y chevy). Incluso si tuvieran los mismos atributos
+    (empate), siguen siendo 2 objetos diferentes.
+</p>
+<p>
+    La clase es el conjunto de todos los objetos y un objeto es la instancia de una clase.
+</p>

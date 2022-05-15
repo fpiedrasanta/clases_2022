@@ -1,0 +1,44 @@
+﻿@{
+    /********************************************************************************************
+    * Copyright (C) 2022 Ing. de Software, 3er año, ITSC
+    *
+    * This program is free software: you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation, either version 3 of the License, or
+    * (at your option) any later version.
+    *
+    * This program is distributed in the hope that it will be useful,
+    * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    * GNU General Public License for more details.
+    *
+    * You should have received a copy of the GNU General Public License
+    * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    *******************************************************************************************/
+}
+
+@model webapp.Models.ViewModel.ProgrammingParadigm.PolymorphismExampleViewModel
+
+@{
+    ViewData["Title"] = "Ejemplo 1: Abstracción";
+}
+
+<hr>
+@foreach (webapp.Models.ProgrammingParadigm.DomesticAnimal pet in Model.Pets)
+{
+    <p>
+        <strong>Talk: </strong>@pet.Talk()
+    </p>
+    <hr>    
+}
+
+<p>
+    No se que animal doméstico es, lo obtuve de forma random o lo obtuve de la base de datos.
+</p>    
+<p>
+    Lo importante es que si es gato o perro, ellos sabrán cómo responder al mensaje de "Hablar
+</p>
+<p>
+    Los diferentes objetos (instancia de Dog o instancia de Cat) responden de diferentes maneras
+    ("Guau" o "Miau") a los mismos mensajes ("Talk").
+</p>

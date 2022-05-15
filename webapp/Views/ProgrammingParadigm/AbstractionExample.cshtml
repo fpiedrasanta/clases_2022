@@ -1,0 +1,54 @@
+﻿@{
+    /********************************************************************************************
+    * Copyright (C) 2022 Ing. de Software, 3er año, ITSC
+    *
+    * This program is free software: you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation, either version 3 of the License, or
+    * (at your option) any later version.
+    *
+    * This program is distributed in the hope that it will be useful,
+    * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    * GNU General Public License for more details.
+    *
+    * You should have received a copy of the GNU General Public License
+    * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    *******************************************************************************************/
+}
+
+@model webapp.Models.ViewModel.ProgrammingParadigm.AbstractionExampleViewModel
+
+@{
+    ViewData["Title"] = "Ejemplo 1: Abstracción";
+}
+
+<hr>
+<p>
+    <strong>Nombre: </strong> @Model.Person.Name
+</p>
+<hr>
+<p>
+    <strong>Apellido: </strong> @Model.Person.Surname
+</p>
+<hr>
+<p>
+    <strong>Número de documento: </strong> @Model.Person.DocumentNumber
+</p>
+<hr>
+<p>
+    <strong>Correo electrónico: </strong> @Model.Person.Email
+</p>
+<hr>
+
+<p>
+    En este sistema/app una persona es la suma de estos 4 atributos y nada más.
+    <br>
+    <br>
+    Ya sé, me dirán Uds. <i>"[...] pero una persona tiene sentimientos que son 
+        los que los hacen verdaderamente únicos [...]". Y si, es cierto, pero en
+        el paradigma orientado a objetos tratamos de replicar la 'realidad' lo
+        mejor posible, pero cómo modelo de esa realidad. Y tomamos cómo atributos
+        de ese objeto solo aquellos que a nosotros nos interesa para el correcto
+        funcionamiento del sistema y de los demás nos <strong>abstraemos</strong>
+</p>
